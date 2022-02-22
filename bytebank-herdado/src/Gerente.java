@@ -19,6 +19,7 @@ public class Gerente extends Funcionario {
 
   // O super é similiar ao this, mas indica que é um atributo da classe mãe
   public double getBonificacao() {
+    System.out.println("Chamando o método de bonificação do GERENTE");
     return super.getBonificacao() + super.getSalario();
   }
 }
