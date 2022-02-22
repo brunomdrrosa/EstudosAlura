@@ -1,12 +1,12 @@
 public class TesteFuncionario {
   public static void main(String[] args) {
 
-    Funcionario funcionario = new Funcionario();
-    funcionario.setNome("Bruno");
-    funcionario.setCpf("000.000.000-01");
-    funcionario.setSalario(1000.00);
+    Gerente bruno = new Gerente();
+    bruno.setNome("Bruno");
+    bruno.setCpf("000.000.000-01");
+    bruno.setSalario(1000.00);
 
-    System.out.println(funcionario.getNome());
-    System.out.println(funcionario.getBonificacao());
+    System.out.println(bruno.getNome());
+    System.out.println(bruno.getBonificacao());
   }
 }
