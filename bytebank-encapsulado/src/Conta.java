@@ -1,9 +1,20 @@
+import java.net.ContentHandler;
+
 public class Conta {
   private double saldo;
   private int agencia;
   private int numero;
   private Cliente titular;
+  private static int total;
 
+  public Conta(int agencia, int numero) {
+    Conta.total++;
+    System.out.println("O total de contas é " + Conta.total);
+    this.agencia = agencia;
+    this.numero = numero;
+    System.out.println("Estou criando uma conta " + this.numero);
+  }
+  
   public void deposita(double valor) {
     this.saldo += valor;
   }
@@ -36,6 +47,10 @@ public class Conta {
   }
 
   public void setNumero(int numero) {
+    if (numero <= 0) {
+      System.out.println("Você não pode usar um valor menor ou igual a 0");
+      return;
+    }
     this.numero = numero;
   }
 
@@ -44,6 +59,10 @@ public class Conta {
   }
 
   public void setAgencia(int agencia){
+    if (agencia <= 0) {
+      System.out.println("Você não pode usar um valor menor ou igual a 0");
+      return;
+    }
     this.agencia = agencia;
   }
 
@@ -53,5 +72,9 @@ public class Conta {
 
   public void setTitular(Cliente titular) {
     this.titular = titular;
+  }
+
+  public static int getTotal() {
+    return Conta.total;
   }
 }
