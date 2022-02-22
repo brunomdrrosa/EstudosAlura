@@ -19,5 +19,8 @@ public class TestaMetodo {
 
     System.out.println(contaDoBruno.saldo);
     System.out.println(conta.saldo);
+
+    contaDoBruno.titular = "Bruno Machado";
+    System.out.println(contaDoBruno.titular);
   }
 }
