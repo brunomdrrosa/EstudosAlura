@@ -1,10 +1,10 @@
-// Gerente é um funcionário, ele herda da classe Funcionario
-public class Gerente extends Funcionario implements Autenticavel {
+public class Administrador extends Funcionario implements Autenticavel {
+
   private int senha;
 
+  @Override
   public double getBonificacao() {
-    System.out.println("Chamando o método de bonificação do GERENTE");
-    return super.getSalario();
+    return 50;
   }
 
   @Override
@@ -20,5 +20,4 @@ public class Gerente extends Funcionario implements Autenticavel {
       return false;
     }
   }
-
 }
